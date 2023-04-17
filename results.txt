@@ -1,0 +1,96 @@
+newman
+
+askAPI
+
+→ /sign-up (S)
+  POST http://ask-qa.portnov.com/api/v1/sign-up [200 OK, 569B, 1000ms]
+
+→ localhost:3000 (S)
+  GET localhost:3000/api/users?_where=(email,eq,batareika0590@kellyfamily.tk) [200 OK, 589B, 216ms]
+
+→ /activate (S)
+  GET http://ask-qa.portnov.com/api/v1/activate/9734/5d25ed419d45a1f8bb5a178794b62b9b277bd92a [200 OK, 571B, 93ms]
+
+→ /forgot-password (S)
+  POST http://ask-qa.portnov.com/api/v1/forgot-password [200 OK, 582B, 897ms]
+
+→ localhost:3000 (S) Copy
+  GET localhost:3000/api/users?_where=(email,eq,batareika0590@kellyfamily.tk) [200 OK, 589B, 203ms]
+
+→ /reset-password (S)
+  POST http://ask-qa.portnov.com/api/v1/reset-password/9734/c0f5d88aedeff2edd66e2815b7f09a21fe4cf4fa [200 OK, 573B, 107ms]
+
+→ /sign-in - (S)
+  POST http://ask-qa.portnov.com/api/v1/sign-in [200 OK, 901B, 103ms]
+
+→ /sign-in (T)
+  POST http://ask-qa.portnov.com/api/v1/sign-in [200 OK, 902B, 100ms]
+
+→ /quizzes (T) Returns all quizzes
+  GET http://ask-qa.portnov.com/api/v1/quizzes [200 OK, 116.13kB, 354ms]
+
+→ /quiz - (T) Creates new quiz
+  POST http://ask-qa.portnov.com/api/v1/quiz [200 OK, 806B, 105ms]
+
+→ /quiz - (T) Updates quiz
+  PUT http://ask-qa.portnov.com/api/v1/quiz [200 OK, 806B, 114ms]
+
+→ /users (T) returns all users
+  GET http://ask-qa.portnov.com/api/v1/users [200 OK, 21.39kB, 122ms]
+
+→ /users/change-name (T)
+  PUT http://ask-qa.portnov.com/api/v1/users/change-name/9734 [200 OK, 770B, 109ms]
+
+→ /users/change-group (T)
+  PUT http://ask-qa.portnov.com/api/v1/users/change-group/9734 [200 OK, 771B, 112ms]
+
+→ /settings/change-name (T)
+  POST http://ask-qa.portnov.com/api/v1/settings/change-name [200 OK, 770B, 111ms]
+
+→ /assignments (T) return all assignments
+  GET http://ask-qa.portnov.com/api/v1/assignments [200 OK, 785.43kB, 561ms]
+
+→ /assignment (T) Creates new assignment
+  POST http://ask-qa.portnov.com/api/v1/assignment [200 OK, 1.67kB, 113ms]
+
+→ /my-assignments - (s)
+  GET http://ask-qa.portnov.com/api/v1/my-assignments [200 OK, 1.3kB, 95ms]
+  √  Verify last assignment quiz ID
+
+→ /submit-assignment - (s)
+  POST http://ask-qa.portnov.com/api/v1/submit-assignment [200 OK, 1.84kB, 105ms]
+
+→ /assignment (T) grades an assignment
+  PUT http://ask-qa.portnov.com/api/v1/assignment/13157 [200 OK, 786.63kB, 1502ms]
+
+→ /my-grades - (s)
+  GET http://ask-qa.portnov.com/api/v1/my-grades [200 OK, 1.9kB, 91ms]
+
+→ /assignment (T)
+  DELETE http://ask-qa.portnov.com/api/v1/assignment/e329906f-aafd-4918-845a-efa889fca356 [200 OK, 771B, 139ms]
+
+→ /quiz (T)
+  DELETE http://ask-qa.portnov.com/api/v1/quiz/11935 [200 OK, 765B, 97ms]
+
+→ /users (T)
+  DELETE http://ask-qa.portnov.com/api/v1/users/9734 [200 OK, 770B, 97ms]
+
+┌─────────────────────────┬─────────────────────┬────────────────────┐
+│                         │            executed │             failed │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              iterations │                   1 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│                requests │                  24 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│            test-scripts │                   7 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│      prerequest-scripts │                   0 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              assertions │                   1 │                  0 │
+├─────────────────────────┴─────────────────────┴────────────────────┤
+│ total run duration: 8.3s                                           │
+├────────────────────────────────────────────────────────────────────┤
+│ total data received: 1.71MB (approx)                               │
+├────────────────────────────────────────────────────────────────────┤
+│ average response time: 272ms [min: 91ms, max: 1502ms, s.d.: 353ms] │
+└────────────────────────────────────────────────────────────────────┘
